@@ -36,34 +36,9 @@ int TrainSkills(const string &skillsFileName, const string &parentPath);
 
 INITIALIZE_EASYLOGGINGPP
 
-class A
-{
-protected:
-    static int x;
-};
-
-class B: public A
-{
-
-};
-
-class C: public A
-{
-
-};
-
-class D: public B, C
-{
-
-};
-
 int main(int argc, char* argv[])
 {
     struct sigaction sa;
-    //DictionaryLoaderSingleton::GetInstance();//.GetFirstNames().size() << endl;
-    //cout << DictionaryLoaderSingleton::GetInstance().GetMap().size() << endl;
-    D d;
-    d.x = 0;
 
     //Initializes structure for catching segmentation fault errors
     memset(&sa, 0, sizeof(sa));
